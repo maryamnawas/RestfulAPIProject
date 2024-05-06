@@ -70,6 +70,20 @@ public class PatientDAO {
         if (isDuplicatePatient(patient.getId())) {
             throw new DuplicateException("Patient with ID " + patient.getId() + " already exists");
         }
+
+        // Assign doctor based on medical history
+        String medicalHistory = patient.getMedicalHistory().toLowerCase();
+        if (medicalHistory.contains("heart")) {
+            // Assign cardiologist
+            patient.setDoctorSpecialization("Cardiologist");
+        } else if (medicalHistory.contains("allergy") || medicalHistory.contains("skin")) {
+            // Assign dermatologist
+            patient.setDoctorSpecialization("Dermatologist");
+        } else if (medicalHistory.contains("diabetes")) {
+            // Assign endocrinologist
+            patient.setDoctorSpecialization("Endocrinologist");
+        }
+
         patient.setId(nextId.getAndIncrement());
         patients.add(patient);
     }
