@@ -8,14 +8,14 @@ package csa.healthsystem.application;
  *
  * @author Maryam
  */
-//import org.glassfish.jersey.server.ResourceConfig;
-//import org.glassfish.jersey.server.ServerProperties;
-//import csa.healthsystem.resource.AppointmentResource;
-//
-//public class AppointmentApplication extends ResourceConfig {
-//    public AppointmentApplication() {
-//        register(AppointmentResource.class);
-//        
-//        property(ServerProperties.TRACING, "ALL");
-//    }
-//}
+import org.glassfish.jersey.server.ResourceConfig;
+import org.glassfish.jersey.server.ServerProperties;
+import csa.healthsystem.resource.AppointmentResource;
+
+public class AppointmentApplication extends ResourceConfig {
+    public AppointmentApplication() {
+        register(AppointmentResource.class);
+        
+        property(ServerProperties.TRACING, "ALL");
+    }
+}
