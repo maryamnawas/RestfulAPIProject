@@ -32,13 +32,13 @@ public class MedicalRecordDAO {
 
     static {
         // Sample medical records
-        Patient patient1 = new Patient(1, "John Doe", "0768899123", "123 Main St", "Allergic to penicillin", "Stable");
+        Patient patient1 = new Patient(1000, "John Doe", "0768899123", "123 Main St", "Allergic to penicillin", "Stable");
         medicalRecords.add(new MedicalRecord(nextId.getAndIncrement(), patient1, "Flu", "Prescription: Rest and plenty of fluids"));
 
-        Patient patient2 = new Patient(2, "Alice Smith", "0768899124", "456 Oak St", "Asthmatic", "Critical");
+        Patient patient2 = new Patient(1001, "Alice Smith", "0768899124", "456 Oak St", "Asthmatic", "Critical");
         medicalRecords.add(new MedicalRecord(nextId.getAndIncrement(), patient2, "Broken arm", "Treatment: Cast applied"));
 
-        Patient patient3 = new Patient(3, "Bob Johnson", "0768899125", "789 Pine St", "Diabetic", "Stable");
+        Patient patient3 = new Patient(1002, "Bob Johnson", "0768899125", "789 Pine St", "Diabetic", "Stable");
         medicalRecords.add(new MedicalRecord(nextId.getAndIncrement(), patient3, "Headache", "Prescription: Pain reliever"));
     }
 

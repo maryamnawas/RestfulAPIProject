@@ -29,16 +29,16 @@ public class AppointmentDAO {
 
     static {
         // Sample appointments with associated doctor and patient instances
-        Doctor doctor1 = new Doctor(101, "Dr. Smith", "0768899123", "456 Elm St", "Cardiologist");
-        Patient patient1 = new Patient(1, "John Doe", "0768899123", "123 Main St", "Allergic to penicillin", "Stable");
+        Doctor doctor1 = new Doctor(1, "Dr. Smith", "0768899123", "456 Elm St", "Cardiologist");
+        Patient patient1 = new Patient(1000, "John Doe", "0768899123", "123 Main St", "Allergic to penicillin", "Stable");
         appointments.add(new Appointment(nextId.getAndIncrement(), "2024-05-05", "09:00", patient1, doctor1));
 
-        Doctor doctor2 = new Doctor(102, "Dr. Johnson", "0768899124", "789 Oak St", "Dermatologist");
-        Patient patient2 = new Patient(2, "Alice Smith", "0768899124", "456 Elm St", "Asthmatic", "Critical");
+        Doctor doctor2 = new Doctor(2, "Dr. Johnson", "0768899124", "789 Oak St", "Dermatologist");
+        Patient patient2 = new Patient(1001, "Alice Smith", "0768899124", "456 Elm St", "Asthmatic", "Critical");
         appointments.add(new Appointment(nextId.getAndIncrement(), "2024-05-06", "10:30", patient2, doctor2));
 
-        Doctor doctor3 = new Doctor(103, "Dr. Brown", "0768899125", "987 Maple St", "Pediatrician");
-        Patient patient3 = new Patient(3, "Bob Johnson", "0768899125", "789 Oak St", "Diabetic", "Stable");
+        Doctor doctor3 = new Doctor(3, "Dr. Brown", "0768899125", "987 Maple St", "Pediatrician");
+        Patient patient3 = new Patient(1002, "Bob Johnson", "0768899125", "789 Oak St", "Diabetic", "Stable");
         appointments.add(new Appointment(nextId.getAndIncrement(), "2024-05-07", "11:45", patient3, doctor3));
     }
 

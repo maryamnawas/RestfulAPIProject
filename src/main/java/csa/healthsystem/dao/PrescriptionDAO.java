@@ -32,18 +32,18 @@ public class PrescriptionDAO {
     private static final AtomicInteger nextId = new AtomicInteger(1);
 
     static{
-        Patient patient1 = new Patient(1, "John Doe", "0768899123", "123 Main St", "Allergic to penicillin", "Stable");
-        Doctor doctor1 = new Doctor(101, "Dr. Smith", "0768899124", "456 Elm St", "Cardiologist");
+        Patient patient1 = new Patient(1000, "John Doe", "0768899123", "123 Main St", "Allergic to penicillin", "Stable");
+        Doctor doctor1 = new Doctor(1, "Dr. Smith", "0768899124", "456 Elm St", "Cardiologist");
         Prescription prescription1 = new Prescription(nextId.getAndIncrement(), patient1, doctor1, "Aspirin", "10mg", "Take once daily with food", 30);
         prescriptions.add(prescription1);
 
-        Patient patient2 = new Patient(2, "Alice Smith", "0768899125", "456 Oak St", "Asthmatic", "Critical");
-        Doctor doctor2 = new Doctor(102, "Dr. Johnson", "0768899126", "789 Oak St", "Dermatologist");
+        Patient patient2 = new Patient(1001, "Alice Smith", "0768899125", "456 Oak St", "Asthmatic", "Critical");
+        Doctor doctor2 = new Doctor(2, "Dr. Johnson", "0768899126", "789 Oak St", "Dermatologist");
         Prescription prescription2 = new Prescription(nextId.getAndIncrement(), patient2, doctor2, "Lipitor", "20mg", "Take at bedtime", 60);
         prescriptions.add(prescription2);
 
-        Patient patient3 = new Patient(3, "Bob Johnson", "0768899127", "789 Pine St", "Diabetic", "Stable");
-        Doctor doctor3 = new Doctor(103, "Dr. Brown", "0768899128", "987 Maple St", "Pediatrician");
+        Patient patient3 = new Patient(1002, "Bob Johnson", "0768899127", "789 Pine St", "Diabetic", "Stable");
+        Doctor doctor3 = new Doctor(3, "Dr. Brown", "0768899128", "987 Maple St", "Pediatrician");
         Prescription prescription3 = new Prescription(nextId.getAndIncrement(), patient3, doctor3, "Insulin", "10 units", "Inject subcutaneously before meals", 90);
         prescriptions.add(prescription3);
     }
