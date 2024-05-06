@@ -21,7 +21,7 @@ public class ValidationCheckerException {
      * @param person The Person object to be validated.
      * @return A String message indicating any validation errors, or null if no errors.
      */
-    public static String validatePersonData(Person person) {
+    public static String validatePerson(Person person) {
         if (person == null || isStringNullOrEmpty(person.getName()) || isStringNullOrEmpty(person.getName())) {
             return "Invalid person data: name is required";
         }
@@ -43,7 +43,7 @@ public class ValidationCheckerException {
     public static String validatePatient(Patient patient) {
 
         // Additional validation specific to Patient class attributes
-        if (patient == null || validatePersonData(patient) != null) {
+        if (patient == null || validatePerson(patient) != null) {
             return "Invalid patient data: name is required";
         }
 
@@ -63,7 +63,7 @@ public class ValidationCheckerException {
      * @return A String message indicating any validation errors, or null if no errors.
      */
     public static String validateDoctor(Doctor doctor) {
-        if (doctor == null || validatePersonData(doctor) != null) {
+        if (doctor == null || validatePerson(doctor) != null) {
             return "Invalid patient data: name is required";
         }
         // Additional validation specific to Doctor class attributes
