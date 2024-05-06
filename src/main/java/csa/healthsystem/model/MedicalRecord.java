@@ -8,83 +8,107 @@ package csa.healthsystem.model;
  *
  * @author Maryam
  */
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+/**
+ * MedicalRecord class represents a patient's medical record.
+ */
 public class MedicalRecord {
+    private static final Logger LOGGER = Logger.getLogger(MedicalRecord.class.getName());
+
     private int id;
     private Patient patient;
-    private Doctor doctor;
-    private String date; // Change the data type to String
-    private String diagnosis;
+    private String diagnoses;
     private String treatments;
 
-    public MedicalRecord(){}
+     // Default constructor
+    public MedicalRecord() {}
     
-    public MedicalRecord(int id, Patient patient, Doctor doctor, String date, String diagnosis, String treatments) {
+    /**
+     * Constructor to initialize a MedicalRecord object with the provided attributes.
+     * @param id The ID of the medical record.
+     * @param patient The patient associated with the medical record.
+     * @param diagnoses The list of diagnoses in the medical record.
+     * @param treatments The list of treatments in the medical record.
+     */
+    public MedicalRecord(int id, Patient patient, String diagnoses, String treatments) {
         this.id = id;
         this.patient = patient;
-        this.doctor = doctor;
-        this.date = date;
-        this.diagnosis = diagnosis;
+        this.diagnoses = diagnoses;
         this.treatments = treatments;
     }
 
     // Getters and setters
+    
+    /**
+     * Get the ID of the medical record.
+     * @return The ID of the medical record.
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * Set the ID of the medical record.
+     * @param id The ID of the medical record to set.
+     */
     public void setId(int id) {
         this.id = id;
     }
 
+    /**
+     * Get the patient associated with the medical record.
+     * @return The patient associated with the medical record.
+     */
     public Patient getPatient() {
+        LOGGER.log(Level.INFO, "Getting patient: " + patient);
         return patient;
     }
 
+    /**
+     * Set the patient associated with the medical record.
+     * @param patient The patient to set.
+     */
     public void setPatient(Patient patient) {
+        LOGGER.log(Level.INFO, "Setting patient: " + patient);
         this.patient = patient;
     }
 
-    public Doctor getDoctor() {
-        return doctor;
+    /**
+     * Get the list of diagnoses in the medical record.
+     * @return The list of diagnoses in the medical record.
+     */
+    public String getDiagnoses() {
+        LOGGER.log(Level.INFO, "Getting diagnoses: " + diagnoses);
+        return diagnoses;
     }
 
-    public void setDoctor(Doctor doctor) {
-        this.doctor = doctor;
+    /**
+     * Set the list of diagnoses in the medical record.
+     * @param diagnoses The list of diagnoses to set.
+     */
+    public void setDiagnoses(String diagnoses) {
+        LOGGER.log(Level.INFO, "Setting diagnoses: " + diagnoses);
+        this.diagnoses = diagnoses;
     }
 
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
-    public String getDiagnosis() {
-        return diagnosis;
-    }
-
-    public void setDiagnosis(String diagnosis) {
-        this.diagnosis = diagnosis;
-    }
-
+    /**
+     * Get the list of treatments in the medical record.
+     * @return The list of treatments in the medical record.
+     */
     public String getTreatments() {
+        LOGGER.log(Level.INFO, "Getting treatments: " + treatments);
         return treatments;
     }
 
+    /**
+     * Set the list of treatments in the medical record.
+     * @param treatments The list of treatments to set.
+     */
     public void setTreatments(String treatments) {
+        LOGGER.log(Level.INFO, "Setting treatments: " + treatments);
         this.treatments = treatments;
-    }
-
-    @Override
-    public String toString() {
-        return "MedicalRecord{" +
-                "id=" + id +
-                ", patient=" + patient +
-                ", doctor=" + doctor +
-                ", date='" + date + '\'' +
-                ", diagnosis='" + diagnosis + '\'' +
-                ", treatments='" + treatments + '\'' +
-                '}';
     }
 }

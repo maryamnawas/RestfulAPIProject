@@ -29,8 +29,8 @@ public class DoctorDAO {
     static {
         // Adding sample doctors
         doctors.add(new Doctor(nextId.getAndIncrement(), "Dr. John Doe", "123-456-7890", "123 Main St", "Cardiologist"));
-        doctors.add(new Doctor(nextId.getAndIncrement(), "Dr. Alice Smith", "456-789-0123", "456 Oak St", "Endocrinologist"));
-        doctors.add(new Doctor(nextId.getAndIncrement(), "Dr. Bob Johnson", "789-012-3456", "789 Pine St", "Dermatologist"));
+        doctors.add(new Doctor(nextId.getAndIncrement(), "Dr. Alice Smith", "456-789-0123", "456 Oak St", "Dermatologist"));
+        doctors.add(new Doctor(nextId.getAndIncrement(), "Dr. Bob Johnson", "789-012-3456", "789 Pine St", "Pediatrician"));
     }
 
     /**

@@ -8,7 +8,6 @@ package csa.healthsystem.model;
  *
  * @author Maryam
  */
-
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -20,24 +19,28 @@ public class Billing {
 
     private int id; 
     private Patient patient;
+    private Doctor doctor; // Adding Doctor as an attribute
+    
     private double invoiceAmount;
     private double paymentAmount;
     private double outstandingBalance;
 
-     // Default constructor
+    // Default constructor
     public Billing() {}
-    
+
     /**
      * Constructor to initialize a Billing object with the provided attributes.
      * @param id The ID of the billing.
      * @param patient The patient associated with the billing.
+     * @param doctor The doctor associated with the billing.
      * @param invoiceAmount The total amount to be invoiced.
      * @param paymentAmount The amount already paid.
      * @param outstandingBalance The outstanding balance.
      */
-    public Billing(int id, Patient patient, double invoiceAmount, double paymentAmount, double outstandingBalance) {
+    public Billing(int id, Patient patient, Doctor doctor, double invoiceAmount, double paymentAmount, double outstandingBalance) {
         this.id = id;
         this.patient = patient;
+        this.doctor = doctor;
         this.invoiceAmount = invoiceAmount;
         this.paymentAmount = paymentAmount;
         this.outstandingBalance = outstandingBalance;
@@ -70,6 +73,24 @@ public class Billing {
     public void setPatient(Patient patient) {
         LOGGER.log(Level.INFO, "Setting patient: " + patient);
         this.patient = patient;
+    }
+
+    /**
+     * Get the doctor associated with the billing.
+     * @return The doctor associated with the billing.
+     */
+    public Doctor getDoctor() {
+        LOGGER.log(Level.INFO, "Getting doctor: " + doctor);
+        return doctor;
+    }
+
+    /**
+     * Set the doctor associated with the billing.
+     * @param doctor The doctor associated with the billing to set.
+     */
+    public void setDoctor(Doctor doctor) {
+        LOGGER.log(Level.INFO, "Setting doctor: " + doctor);
+        this.doctor = doctor;
     }
 
     /**

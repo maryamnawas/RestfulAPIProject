@@ -28,9 +28,9 @@ public class PatientDAO {
 
     static {
         // Adding sample patients
-        patients.add(new Patient(nextId.getAndIncrement(), "Mary Dias", "123-456-7890", "123 Main St", "Heart condition", "Stable"));
-        patients.add(new Patient(nextId.getAndIncrement(), "Joack Jill", "456-789-0123", "456 Oak St", "Diabetes", "Under treatment"));
-        patients.add(new Patient(nextId.getAndIncrement(), "Jack Gill", "789-012-3456", "789 Elm St", "Allergy", "Recovering"));
+        patients.add(new Patient(nextId.getAndIncrement(), "John Doe", "123-456-7890", "123 Main St", "Heart condition", "Stable"));
+        patients.add(new Patient(nextId.getAndIncrement(), "Alice Smith", "456-789-0123", "456 Oak St", "Diabetes", "Under treatment"));
+        patients.add(new Patient(nextId.getAndIncrement(), "Bob Johnson", "789-012-3456", "789 Elm St", "Allergy", "Recovering"));
     }
 
     /**
