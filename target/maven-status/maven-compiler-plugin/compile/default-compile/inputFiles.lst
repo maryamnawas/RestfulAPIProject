@@ -1,32 +1,33 @@
-D:\L5 Lecture Materials\Client-server\CSA_CW\CSA_CW\src\main\java\csa\healthsystem\application\DoctorApplication.java
-D:\L5 Lecture Materials\Client-server\CSA_CW\CSA_CW\src\main\java\csa\healthsystem\dao\MedicalRecordDAO.java
-D:\L5 Lecture Materials\Client-server\CSA_CW\CSA_CW\src\main\java\csa\healthsystem\application\AppointmentApplication.java
-D:\L5 Lecture Materials\Client-server\CSA_CW\CSA_CW\src\main\java\csa\healthsystem\application\PrescriptionApplication.java
-D:\L5 Lecture Materials\Client-server\CSA_CW\CSA_CW\src\main\java\csa\healthsystem\model\Appointment.java
-D:\L5 Lecture Materials\Client-server\CSA_CW\CSA_CW\src\main\java\csa\healthsystem\model\Person.java
-D:\L5 Lecture Materials\Client-server\CSA_CW\CSA_CW\src\main\java\csa\healthsystem\application\PatientApplication.java
-D:\L5 Lecture Materials\Client-server\CSA_CW\CSA_CW\src\main\java\csa\healthsystem\resource\AppointmentResource.java
-D:\L5 Lecture Materials\Client-server\CSA_CW\CSA_CW\src\main\java\csa\healthsystem\resource\MedicalRecordResource.java
-D:\L5 Lecture Materials\Client-server\CSA_CW\CSA_CW\src\main\java\csa\healthsystem\dao\PersonDAO.java
-D:\L5 Lecture Materials\Client-server\CSA_CW\CSA_CW\src\main\java\csa\healthsystem\exception\DuplicateException.java
-D:\L5 Lecture Materials\Client-server\CSA_CW\CSA_CW\src\main\java\csa\healthsystem\resource\PatientResource.java
-D:\L5 Lecture Materials\Client-server\CSA_CW\CSA_CW\src\main\java\csa\healthsystem\model\Billing.java
-D:\L5 Lecture Materials\Client-server\CSA_CW\CSA_CW\src\main\java\csa\healthsystem\model\Doctor.java
-D:\L5 Lecture Materials\Client-server\CSA_CW\CSA_CW\src\main\java\csa\healthsystem\dao\PrescriptionDAO.java
-D:\L5 Lecture Materials\Client-server\CSA_CW\CSA_CW\src\main\java\csa\healthsystem\resource\DoctorResource.java
-D:\L5 Lecture Materials\Client-server\CSA_CW\CSA_CW\src\main\java\csa\healthsystem\model\Prescription.java
-D:\L5 Lecture Materials\Client-server\CSA_CW\CSA_CW\src\main\java\csa\healthsystem\dao\BillingDAO.java
-D:\L5 Lecture Materials\Client-server\CSA_CW\CSA_CW\src\main\java\csa\healthsystem\resource\BillingResource.java
-D:\L5 Lecture Materials\Client-server\CSA_CW\CSA_CW\src\main\java\csa\healthsystem\model\MedicalRecord.java
-D:\L5 Lecture Materials\Client-server\CSA_CW\CSA_CW\src\main\java\csa\healthsystem\dao\AppointmentDAO.java
-D:\L5 Lecture Materials\Client-server\CSA_CW\CSA_CW\src\main\java\csa\healthsystem\dao\PatientDAO.java
-D:\L5 Lecture Materials\Client-server\CSA_CW\CSA_CW\src\main\java\csa\healthsystem\model\Patient.java
-D:\L5 Lecture Materials\Client-server\CSA_CW\CSA_CW\src\main\java\csa\healthsystem\resource\PrescriptionResource.java
-D:\L5 Lecture Materials\Client-server\CSA_CW\CSA_CW\src\main\java\csa\healthsystem\dao\DoctorDAO.java
-D:\L5 Lecture Materials\Client-server\CSA_CW\CSA_CW\src\main\java\csa\healthsystem\exception\InvalidDataException.java
-D:\L5 Lecture Materials\Client-server\CSA_CW\CSA_CW\src\main\java\csa\healthsystem\application\MedicalRecordApplication.java
-D:\L5 Lecture Materials\Client-server\CSA_CW\CSA_CW\src\main\java\csa\healthsystem\application\BillingApplication.java
-D:\L5 Lecture Materials\Client-server\CSA_CW\CSA_CW\src\main\java\csa\healthsystem\exception\NotFoundException.java
-D:\L5 Lecture Materials\Client-server\CSA_CW\CSA_CW\src\main\java\csa\healthsystem\application\PersonApplication.java
-D:\L5 Lecture Materials\Client-server\CSA_CW\CSA_CW\src\main\java\csa\healthsystem\resource\PersonResource.java
-D:\L5 Lecture Materials\Client-server\CSA_CW\CSA_CW\src\main\java\csa\healthsystem\exception\DatabaseException.java
+D:\Desktop\MoveMate\moveMate\RestfulAPIProject\src\main\java\csa\healthsystem\model\Doctor.java
+D:\Desktop\MoveMate\moveMate\RestfulAPIProject\src\main\java\csa\healthsystem\application\PrescriptionApplication.java
+D:\Desktop\MoveMate\moveMate\RestfulAPIProject\src\main\java\csa\healthsystem\resource\PersonResource.java
+D:\Desktop\MoveMate\moveMate\RestfulAPIProject\src\main\java\csa\healthsystem\dao\DoctorDAO.java
+D:\Desktop\MoveMate\moveMate\RestfulAPIProject\src\main\java\csa\healthsystem\resource\BillingResource.java
+D:\Desktop\MoveMate\moveMate\RestfulAPIProject\src\main\java\csa\healthsystem\exception\NotFoundException.java
+D:\Desktop\MoveMate\moveMate\RestfulAPIProject\src\main\java\csa\healthsystem\exception\ValidationCheckerException.java
+D:\Desktop\MoveMate\moveMate\RestfulAPIProject\src\main\java\csa\healthsystem\model\Prescription.java
+D:\Desktop\MoveMate\moveMate\RestfulAPIProject\src\main\java\csa\healthsystem\exception\InvalidDataException.java
+D:\Desktop\MoveMate\moveMate\RestfulAPIProject\src\main\java\csa\healthsystem\model\Patient.java
+D:\Desktop\MoveMate\moveMate\RestfulAPIProject\src\main\java\csa\healthsystem\dao\PrescriptionDAO.java
+D:\Desktop\MoveMate\moveMate\RestfulAPIProject\src\main\java\csa\healthsystem\application\PersonApplication.java
+D:\Desktop\MoveMate\moveMate\RestfulAPIProject\src\main\java\csa\healthsystem\application\BillingApplication.java
+D:\Desktop\MoveMate\moveMate\RestfulAPIProject\src\main\java\csa\healthsystem\model\MedicalRecord.java
+D:\Desktop\MoveMate\moveMate\RestfulAPIProject\src\main\java\csa\healthsystem\exception\DatabaseException.java
+D:\Desktop\MoveMate\moveMate\RestfulAPIProject\src\main\java\csa\healthsystem\model\Person.java
+D:\Desktop\MoveMate\moveMate\RestfulAPIProject\src\main\java\csa\healthsystem\resource\PatientResource.java
+D:\Desktop\MoveMate\moveMate\RestfulAPIProject\src\main\java\csa\healthsystem\dao\BillingDAO.java
+D:\Desktop\MoveMate\moveMate\RestfulAPIProject\src\main\java\csa\healthsystem\application\MedicalRecordApplication.java
+D:\Desktop\MoveMate\moveMate\RestfulAPIProject\src\main\java\csa\healthsystem\model\Appointment.java
+D:\Desktop\MoveMate\moveMate\RestfulAPIProject\src\main\java\csa\healthsystem\dao\PatientDAO.java
+D:\Desktop\MoveMate\moveMate\RestfulAPIProject\src\main\java\csa\healthsystem\resource\AppointmentResource.java
+D:\Desktop\MoveMate\moveMate\RestfulAPIProject\src\main\java\csa\healthsystem\resource\DoctorResource.java
+D:\Desktop\MoveMate\moveMate\RestfulAPIProject\src\main\java\csa\healthsystem\application\PatientApplication.java
+D:\Desktop\MoveMate\moveMate\RestfulAPIProject\src\main\java\csa\healthsystem\model\Billing.java
+D:\Desktop\MoveMate\moveMate\RestfulAPIProject\src\main\java\csa\healthsystem\resource\PrescriptionResource.java
+D:\Desktop\MoveMate\moveMate\RestfulAPIProject\src\main\java\csa\healthsystem\application\AppointmentApplication.java
+D:\Desktop\MoveMate\moveMate\RestfulAPIProject\src\main\java\csa\healthsystem\resource\MedicalRecordResource.java
+D:\Desktop\MoveMate\moveMate\RestfulAPIProject\src\main\java\csa\healthsystem\dao\AppointmentDAO.java
+D:\Desktop\MoveMate\moveMate\RestfulAPIProject\src\main\java\csa\healthsystem\dao\MedicalRecordDAO.java
+D:\Desktop\MoveMate\moveMate\RestfulAPIProject\src\main\java\csa\healthsystem\dao\PersonDAO.java
+D:\Desktop\MoveMate\moveMate\RestfulAPIProject\src\main\java\csa\healthsystem\application\DoctorApplication.java
+D:\Desktop\MoveMate\moveMate\RestfulAPIProject\src\main\java\csa\healthsystem\exception\DuplicateException.java
