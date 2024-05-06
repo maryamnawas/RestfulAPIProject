@@ -16,6 +16,8 @@ public class MedicalRecord {
     private String diagnosis;
     private String treatments;
 
+    public MedicalRecord(){}
+    
     public MedicalRecord(int id, Patient patient, Doctor doctor, String date, String diagnosis, String treatments) {
         this.id = id;
         this.patient = patient;
