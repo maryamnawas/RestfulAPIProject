@@ -8,6 +8,7 @@ package csa.healthsystem.model;
  *
  * @author Maryam
  */
+
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -16,11 +17,11 @@ import java.util.logging.Logger;
  */
 public class Patient extends Person {
     private static final Logger LOGGER = Logger.getLogger(Patient.class.getName());
+    private static int id = 1000;
 
     // Additional attributes specific to Patient
     private String medicalHistory;
     private String currentHealthStatus;
-    private String doctorSpecialization; // New attribute to store the doctor specialization
     
     // Default constructor
     public Patient() {
@@ -38,7 +39,7 @@ public class Patient extends Person {
      */
     public Patient(int id, String name, String contactInformation, String address, String medicalHistory, String currentHealthStatus) {
         // Calling the constructor of the superclass (Person) to initialize inherited attributes
-        super(id, name, contactInformation, address);
+        super(id++, name, contactInformation, address);
         // Initializing additional attributes specific to Patient
         this.medicalHistory = medicalHistory;
         this.currentHealthStatus = currentHealthStatus;
@@ -80,23 +81,5 @@ public class Patient extends Person {
     public void setCurrentHealthStatus(String currentHealthStatus) {
         LOGGER.log(Level.INFO, "Setting current health status: " + currentHealthStatus);
         this.currentHealthStatus = currentHealthStatus;
-    }
-
-    /**
-     * Get the doctor specialization assigned to the patient.
-     * @return The doctor specialization assigned to the patient.
-     */
-    public String getDoctorSpecialization() {
-        LOGGER.log(Level.INFO, "Getting doctor specialization: " + doctorSpecialization);
-        return doctorSpecialization;
-    }
-
-    /**
-     * Set the doctor specialization assigned to the patient.
-     * @param doctorSpecialization The doctor specialization to set.
-     */
-    public void setDoctorSpecialization(String doctorSpecialization) {
-        LOGGER.log(Level.INFO, "Setting doctor specialization: " + doctorSpecialization);
-        this.doctorSpecialization = doctorSpecialization;
     }
 }

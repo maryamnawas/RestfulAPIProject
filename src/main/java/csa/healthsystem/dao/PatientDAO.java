@@ -28,9 +28,9 @@ public class PatientDAO {
 
     static {
         // Adding sample patients
-        patients.add(new Patient(nextId.getAndIncrement(), "John Doe", "123-456-7890", "123 Main St", "Heart condition", "Stable"));
-        patients.add(new Patient(nextId.getAndIncrement(), "Alice Smith", "456-789-0123", "456 Oak St", "Diabetes", "Under treatment"));
-        patients.add(new Patient(nextId.getAndIncrement(), "Bob Johnson", "789-012-3456", "789 Elm St", "Allergy", "Recovering"));
+        patients.add(new Patient(nextId.getAndIncrement(), "Mary Dias", "123-456-7890", "123 Main St", "Heart condition", "Stable"));
+        patients.add(new Patient(nextId.getAndIncrement(), "Joack Jill", "456-789-0123", "456 Oak St", "Diabetes", "Under treatment"));
+        patients.add(new Patient(nextId.getAndIncrement(), "Jack Gill", "789-012-3456", "789 Elm St", "Allergy", "Recovering"));
     }
 
     /**
@@ -70,20 +70,6 @@ public class PatientDAO {
         if (isDuplicatePatient(patient.getId())) {
             throw new DuplicateException("Patient with ID " + patient.getId() + " already exists");
         }
-
-        // Assign doctor based on medical history
-        String medicalHistory = patient.getMedicalHistory().toLowerCase();
-        if (medicalHistory.contains("heart")) {
-            // Assign cardiologist
-            patient.setDoctorSpecialization("Cardiologist");
-        } else if (medicalHistory.contains("allergy") || medicalHistory.contains("skin")) {
-            // Assign dermatologist
-            patient.setDoctorSpecialization("Dermatologist");
-        } else if (medicalHistory.contains("diabetes")) {
-            // Assign endocrinologist
-            patient.setDoctorSpecialization("Endocrinologist");
-        }
-
         patient.setId(nextId.getAndIncrement());
         patients.add(patient);
     }

@@ -7,15 +7,15 @@ package csa.healthsystem.application;
 /**
  *
  * @author Maryam
- */
-import org.glassfish.jersey.server.ResourceConfig;
-import org.glassfish.jersey.server.ServerProperties;
-import csa.healthsystem.resource.BillingResource;
-
-public class BillingApplication extends ResourceConfig {
-    public BillingApplication() {
-        register(BillingResource.class);
-        
-        property(ServerProperties.TRACING, "ALL");
-    }
-}
+// */
+//import org.glassfish.jersey.server.ResourceConfig;
+//import org.glassfish.jersey.server.ServerProperties;
+//import csa.healthsystem.resource.BillingResource;
+//
+//public class BillingApplication extends ResourceConfig {
+//    public BillingApplication() {
+//        register(BillingResource.class);
+//        
+//        property(ServerProperties.TRACING, "ALL");
+//    }
+//}
