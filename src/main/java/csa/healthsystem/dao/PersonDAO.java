@@ -11,6 +11,8 @@ package csa.healthsystem.dao;
 import csa.healthsystem.model.Person;
 import csa.healthsystem.exception.NotFoundException;
 import csa.healthsystem.exception.DuplicateException;
+import csa.healthsystem.exception.InvalidDataException;
+import csa.healthsystem.exception.ValidationCheckerException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -67,9 +69,15 @@ public class PersonDAO {
      * Adds a new person.
      * @param person The person to add
      * @throws DuplicateException if a person with the same ID already exists
+     * @throws InvalidDataException if the person data is invalid
      */
     public void addPerson(Person person) {
         LOGGER.log(Level.INFO, "Adding new person: " + person);
+        String validationError = ValidationCheckerException.validatePerson(person);
+        if (validationError != null) {
+            LOGGER.warning("Invalid person data: " + validationError);
+            throw new InvalidDataException(validationError);
+        }
         if (isDuplicatePerson(person.getId())) {
             throw new DuplicateException("Person with ID " + person.getId() + " already exists");
         }
@@ -87,10 +95,16 @@ public class PersonDAO {
      * @param id ID of the person to update
      * @param updatedPerson Updated person information
      * @throws NotFoundException if the specified person is not found
+     * @throws InvalidDataException if the updated person data is invalid
      */
     public void updatePerson(int id, Person updatedPerson) {
         LOGGER.log(Level.INFO, "Updating person with ID: " + id);
         Person existingPerson = getPersonById(id);
+        String validationError = ValidationCheckerException.validatePerson(updatedPerson);
+        if (validationError != null) {
+            LOGGER.warning("Invalid updated person data: " + validationError);
+            throw new InvalidDataException(validationError);
+        }
         existingPerson.setName(updatedPerson.getName());
         existingPerson.setContactInformation(updatedPerson.getContactInformation());
         existingPerson.setAddress(updatedPerson.getAddress());

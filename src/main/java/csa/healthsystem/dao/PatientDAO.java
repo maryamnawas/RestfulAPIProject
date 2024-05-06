@@ -11,6 +11,8 @@ package csa.healthsystem.dao;
 import csa.healthsystem.model.Patient;
 import csa.healthsystem.exception.NotFoundException;
 import csa.healthsystem.exception.DuplicateException;
+import csa.healthsystem.exception.InvalidDataException;
+import csa.healthsystem.exception.ValidationCheckerException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -64,9 +66,15 @@ public class PatientDAO {
      * Adds a new patient.
      * @param patient The patient to add
      * @throws DuplicateException if a patient with the same ID already exists
+     * @throws InvalidDataException if the patient data is invalid
      */
     public void addPatient(Patient patient) {
         LOGGER.log(Level.INFO, "Adding new patient: " + patient);
+        String validationError = ValidationCheckerException.validatePatient(patient);
+        if (validationError != null) {
+            LOGGER.warning("Invalid patient data: " + validationError);
+            throw new InvalidDataException(validationError);
+        }
         if (isDuplicatePatient(patient.getId())) {
             throw new DuplicateException("Patient with ID " + patient.getId() + " already exists");
         }
@@ -84,10 +92,16 @@ public class PatientDAO {
      * @param id ID of the patient to update
      * @param updatedPatient Updated patient information
      * @throws NotFoundException if the specified patient is not found
+     * @throws InvalidDataException if the updated patient data is invalid
      */
     public void updatePatient(int id, Patient updatedPatient) {
         LOGGER.log(Level.INFO, "Updating patient with ID: " + id);
         Patient existingPatient = getPatientById(id);
+        String validationError = ValidationCheckerException.validatePatient(updatedPatient);
+        if (validationError != null) {
+            LOGGER.warning("Invalid updated patient data: " + validationError);
+            throw new InvalidDataException(validationError);
+        }
         existingPatient.setName(updatedPatient.getName());
         existingPatient.setContactInformation(updatedPatient.getContactInformation());
         existingPatient.setAddress(updatedPatient.getAddress());

@@ -11,6 +11,8 @@ package csa.healthsystem.dao;
 import csa.healthsystem.model.Doctor;
 import csa.healthsystem.exception.NotFoundException;
 import csa.healthsystem.exception.DuplicateException;
+import csa.healthsystem.exception.InvalidDataException;
+import csa.healthsystem.exception.ValidationCheckerException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -64,9 +66,15 @@ public class DoctorDAO {
      * Adds a new doctor.
      * @param doctor The doctor to add
      * @throws DuplicateException if a doctor with the same ID already exists
+     * @throws InvalidDataException if the doctor data is invalid
      */
     public void addDoctor(Doctor doctor) {
         LOGGER.log(Level.INFO, "Adding new doctor: " + doctor);
+        String validationError = ValidationCheckerException.validateDoctor(doctor);
+        if (validationError != null) {
+            LOGGER.warning("Invalid doctor data: " + validationError);
+            throw new InvalidDataException(validationError);
+        }
         if (isDuplicateDoctor(doctor.getId())) {
             throw new DuplicateException("Doctor with ID " + doctor.getId() + " already exists");
         }
@@ -79,10 +87,16 @@ public class DoctorDAO {
      * @param id ID of the doctor to update
      * @param updatedDoctor Updated doctor information
      * @throws NotFoundException if the specified doctor is not found
+     * @throws InvalidDataException if the updated doctor data is invalid
      */
     public void updateDoctor(int id, Doctor updatedDoctor) {
         LOGGER.log(Level.INFO, "Updating doctor with ID: " + id);
         Doctor existingDoctor = getDoctorById(id);
+        String validationError = ValidationCheckerException.validateDoctor(updatedDoctor);
+        if (validationError != null) {
+            LOGGER.warning("Invalid updated doctor data: " + validationError);
+            throw new InvalidDataException(validationError);
+        }
         existingDoctor.setName(updatedDoctor.getName());
         existingDoctor.setContactInformation(updatedDoctor.getContactInformation());
         existingDoctor.setAddress(updatedDoctor.getAddress());
