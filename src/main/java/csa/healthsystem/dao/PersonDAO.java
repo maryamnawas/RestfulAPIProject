@@ -30,9 +30,9 @@ public class PersonDAO {
 
     static {
         // Adding sample persons
-        Person person1 = new Person(nextId.getAndIncrement(), "John Doe", "john.doe@example.com", "123 Main St");
-        Person person2 = new Person(nextId.getAndIncrement(), "Alice Smith", "alice.smith@example.com", "456 Elm St");
-        Person person3 = new Person(nextId.getAndIncrement(), "Bob Johnson", "bob.johnson@example.com", "789 Oak St");
+        Person person1 = new Person(nextId.getAndIncrement(), "John Doe", "1234567890", "123 Main St");
+        Person person2 = new Person(nextId.getAndIncrement(), "Alice Smith", "2345678901", "456 Elm St");
+        Person person3 = new Person(nextId.getAndIncrement(), "Bob Johnson", "3456789012", "789 Oak St");
         persons.add(person1);
         persons.add(person2);
         persons.add(person3);

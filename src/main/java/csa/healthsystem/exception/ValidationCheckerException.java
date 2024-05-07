@@ -22,11 +22,8 @@ public class ValidationCheckerException {
      * @return A String message indicating any validation errors, or null if no errors.
      */
     public static String validatePerson(Person person) {
-        if (person == null || isStringNullOrEmpty(person.getName()) || isStringNullOrEmpty(person.getName())) {
-            return "Invalid person data: name is required";
-        }
         if (!isValidContactInfo(person.getContactInformation())) {
-            return "Invalid person data: invalid phone number";
+            return "Invalid person data: invalid phone number, enter a 10 digit number";
         }
         if (isStringNullOrEmpty(person.getAddress())) {
             return "Invalid person data: address is required";
@@ -41,11 +38,6 @@ public class ValidationCheckerException {
      * @return A String message indicating any validation errors, or null if no errors.
      */
     public static String validatePatient(Patient patient) {
-
-        // Additional validation specific to Patient class attributes
-        if (patient == null || validatePerson(patient) != null) {
-            return "Invalid patient data: name is required";
-        }
 
         if (isStringNullOrEmpty(patient.getMedicalHistory())) {
             return "Invalid patient data: medical history is required";
@@ -63,9 +55,6 @@ public class ValidationCheckerException {
      * @return A String message indicating any validation errors, or null if no errors.
      */
     public static String validateDoctor(Doctor doctor) {
-        if (doctor == null || validatePerson(doctor) != null) {
-            return "Invalid patient data: name is required";
-        }
         // Additional validation specific to Doctor class attributes
         if (isStringNullOrEmpty(doctor.getSpecialization())) {
             return "Invalid patient data: specialization is required";
@@ -188,7 +177,7 @@ public class ValidationCheckerException {
     }
 
     /**
-     * Checks if a phone number is valid (10 digits).
+     * Checks if a phone number is valid (10 digits).   
      * 
      * @param phoneNumber The phone number to be checked.
      * @return True if the phone number is valid, otherwise false.

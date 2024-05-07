@@ -37,7 +37,7 @@ public class Person {
         this.contactInformation = contactInformation;
         this.address = address;
     }
-
+    
     // Getters and setters for id, name, contactInformation, and address
 
     /**
